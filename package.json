@@ -1,0 +1,81 @@
+{
+  "name": "@solenopsis/sf-precise-deploy",
+  "version": "0.1.0",
+  "description": "Salesforce CLI plugin for surgical deployments with field-level delta detection",
+  "author": "Scot P. Floess",
+  "license": "GPL-3.0",
+  "main": "lib/index.js",
+  "type": "module",
+  "keywords": [
+    "salesforce",
+    "sfdx",
+    "sf",
+    "plugin",
+    "deployment",
+    "delta",
+    "field-level",
+    "metadata",
+    "solenopsis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solenopsis/sf-precise-deploy"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "lint": "eslint src/**/*.ts",
+    "prepack": "npm run build",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "posttest": "npm run lint"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@oclif/core": "^4",
+    "@salesforce/core": "^8",
+    "@salesforce/sf-plugins-core": "^11",
+    "@salesforce/source-deploy-retrieve": "^12",
+    "fast-xml-parser": "^4.5.0",
+    "simple-git": "^3.36.0"
+  },
+  "devDependencies": {
+    "@oclif/plugin-command-snapshot": "^5",
+    "@oclif/test": "^4",
+    "@salesforce/dev-scripts": "^10",
+    "@salesforce/ts-sinon": "^1",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-prettier": "^9",
+    "mocha": "^10",
+    "rimraf": "^6",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "oclif": {
+    "bin": "sf",
+    "topicSeparator": " ",
+    "dirname": "sf-precise-deploy",
+    "commands": "./lib/commands",
+    "plugins": [],
+    "topics": {
+      "precise": {
+        "description": "Surgical deployment commands with field-level delta detection"
+      }
+    },
+    "devPlugins": [
+      "@oclif/plugin-command-snapshot"
+    ]
+  },
+  "files": [
+    "/lib",
+    "/messages",
+    "/oclif.manifest.json"
+  ]
+}

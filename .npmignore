@@ -1,0 +1,23 @@
+# Source files
+src/
+test/
+test-data/
+
+# Development files
+.github/
+.vscode/
+*.tsbuildinfo
+tsconfig.json
+.eslintrc.json
+.mocharc.json
+.gitignore
+
+# Documentation (optional - remove if you want docs published)
+DEVELOPMENT.md
+SUMMARY.md
+QUICKSTART.md
+
+# Logs and temp
+*.log
+.DS_Store
+/tmp

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CustomField1__c</fullName>
+        <label>Custom Field 1</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>CustomField2__c</fullName>
+        <label>Custom Field 2</label>
+        <type>Number</type>
+        <precision>18</precision>
+        <scale>2</scale>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>OldField__c</fullName>
+        <label>Old Field (to be deleted)</label>
+        <type>Text</type>
+        <length>100</length>
+    </fields>
+    <validationRules>
+        <fullName>Amount_Must_Be_Positive</fullName>
+        <active>true</active>
+        <errorConditionFormula>CustomField2__c &lt; 0</errorConditionFormula>
+        <errorMessage>Amount must be positive</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_Field_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(CustomField1__c)</errorConditionFormula>
+        <errorMessage>Field 1 is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Old_Validation_Rule</fullName>
+        <active>false</active>
+        <errorConditionFormula>true</errorConditionFormula>
+        <errorMessage>This will be deleted</errorMessage>
+    </validationRules>
+    <recordTypes>
+        <fullName>Premium</fullName>
+        <label>Premium Account</label>
+        <active>true</active>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <label>Standard Account</label>
+        <active>true</active>
+    </recordTypes>
+    <listViews>
+        <fullName>All_Active_Accounts</fullName>
+        <label>All Active Accounts</label>
+        <filterScope>Everything</filterScope>
+    </listViews>
+    <webLinks>
+        <fullName>Google_Maps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <url>https://maps.google.com</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,11 @@
+*-debug.log
+*-error.log
+*.tsbuildinfo
+.DS_Store
+.nyc_output
+.vscode
+/lib
+/node_modules
+/package-lock.json
+/tmp
+tsconfig.tsbuildinfo
