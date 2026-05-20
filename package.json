@@ -1,5 +1,5 @@
 {
-  "name": "@solenopsis/sf-precise-deploy",
+  "name": "@flossware/sf-precise-deploy",
   "version": "0.1.0",
   "description": "Salesforce CLI plugin for surgical deployments with field-level delta detection",
   "author": "Scot P. Floess",
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/solenopsis/sf-precise-deploy"
+    "url": "git+https://github.com/solenopsis/sf-precise-deploy.git"
   },
   "scripts": {
     "build": "tsc -b",

@@ -1,7 +1,7 @@
 # sf-precise-deploy
 
 [![CI](https://github.com/solenopsis/sf-precise-deploy/actions/workflows/ci.yml/badge.svg)](https://github.com/solenopsis/sf-precise-deploy/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/%40solenopsis%2Fsf-precise-deploy.svg)](https://www.npmjs.com/package/@solenopsis/sf-precise-deploy)
+[![npm version](https://badge.fury.io/js/%40flossware%2Fsf-precise-deploy.svg)](https://www.npmjs.com/package/@flossware/sf-precise-deploy)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Salesforce CLI plugin for surgical deployments with field-level delta detection.
@@ -45,7 +45,7 @@ Three modes to fit your workflow:
 ## Installation
 
 ```bash
-sf plugins install @solenopsis/sf-precise-deploy
+sf plugins install @flossware/sf-precise-deploy
 ```
 
 ## Quick Start
