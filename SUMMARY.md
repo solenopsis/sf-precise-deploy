@@ -4,7 +4,11 @@
 
 A modern Salesforce CLI plugin that brings **field-level delta detection** to deployments, preserving Solenopsis's unique capabilities in a modern stack.
 
-**Project Location:** `~/Development/github/solenopsis/sf-precise-deploy/`
+**Project Location:** `~/Development/github/solenopsis/sf-precise-deploy/`  
+**Published:** https://www.npmjs.com/package/@flossware/sf-precise-deploy  
+**GitHub:** https://github.com/solenopsis/sf-precise-deploy  
+**Version:** 0.1.0  
+**Status:** ✅ Production-ready (40 passing tests)
 
 ---
 
@@ -118,8 +122,9 @@ sf-precise-deploy/
 - TypeScript files: 8
 - Commands: 3
 - Core libraries: 4
-- Test files: 1
-- Documentation files: 4
+- Test files: 5 (40 passing tests)
+- Documentation files: 5
+- Supported metadata child types: 40+
 
 ---
 
@@ -220,32 +225,39 @@ sf precise deploy --target-org myOrg --git-ref origin/main
 
 ---
 
-## 📈 Next Steps
+## ✅ Completed (v0.1.0)
 
-### Short Term (Ready to Use)
-- [x] Core field-level diff engine
+### Core Features
+- [x] Field-level diff engine (40+ metadata types)
 - [x] Git integration
-- [x] Deploy command
+- [x] Deploy command with two modes
 - [x] Sample metadata
-- [ ] Run actual test with SF org
-- [ ] Write comprehensive unit tests
-- [ ] Add integration tests
+- [x] Comprehensive unit tests (40 passing)
+- [x] Error handling for edge cases
+- [x] CI/CD with GitHub Actions
+- [x] Published to npm
+- [x] Complete documentation
 
-### Medium Term (Enhance)
-- [ ] Profile/permset sanitization (auto-remove ignored references)
+## 📈 Future Enhancements
+
+### v0.2.0 (Planned)
+- [ ] Profile/permset sanitization
 - [ ] Pre-deploy transformation pipeline
 - [ ] Package.xml generation for changed files
-- [ ] Better error handling and reporting
-- [ ] Progress indicators for long operations
-- [ ] JSON output for CI/CD
+- [ ] JSON output for CI/CD integration
+- [ ] Progress indicators
 
-### Long Term (Polish & Publish)
-- [ ] Performance optimization
-- [ ] More metadata type support
-- [ ] Plugin publishing to npm
+### v0.3.0 (Planned)
+- [ ] More metadata type support (Translations, Settings, etc.)
+- [ ] Smart retrieval optimization
+- [ ] Deployment result visualization
+- [ ] Integration with CI/CD platforms
+
+### v1.0.0 (Planned)
+- [ ] Full Solenopsis feature parity
 - [ ] Documentation site
 - [ ] Video tutorials
-- [ ] Community building
+- [ ] Performance optimization
 
 ---
 
@@ -281,31 +293,31 @@ Key accomplishments:
 7. ✅ Documented everything
 
 **Build Status:** ✅ Compiles successfully  
-**Tests:** ⚠️ Unit tests needed  
-**Ready to Test:** ✅ Yes, link and try!
+**Tests:** ✅ 40 passing tests  
+**Published:** ✅ Available on npm  
+**Ready to Use:** ✅ Yes!
 
 ---
 
 ## 🚦 How to Use Right Now
 
 ```bash
-# 1. Navigate to project
-cd ~/Development/github/solenopsis/sf-precise-deploy
+# 1. Install from npm
+sf plugins install @flossware/sf-precise-deploy
 
-# 2. Link to SF CLI
-sf plugins link .
-
-# 3. Verify
+# 2. Verify installation
 sf precise --help
 
-# 4. Test with sample data
-sf precise delta -s test-data/source -t test-data/target -o delta-output
+# 3. Test with your Salesforce metadata
+sf precise git-delta --from origin/main --to HEAD
 
-# 5. View results
-cat delta-output/destructiveChanges.xml
-
-# 6. When ready, deploy to real org
+# 4. Deploy to org
 sf precise deploy --target-org yourOrg --git-ref origin/main --check-only
+
+# OR for development/contributing:
+cd ~/Development/github/solenopsis/sf-precise-deploy
+npm install && npm run build
+sf plugins link .
 ```
 
 ---

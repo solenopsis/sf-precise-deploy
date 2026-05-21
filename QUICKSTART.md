@@ -1,14 +1,26 @@
 # Quick Start Guide
 
-## Installation & Setup
+## Installation
 
+### Option 1: Install from npm (Recommended)
 ```bash
-cd ~/Development/github/solenopsis/sf-precise-deploy
+# Install the published plugin
+sf plugins install @flossware/sf-precise-deploy
 
-# Install dependencies (already done)
+# Verify installation
+sf precise --help
+```
+
+### Option 2: Install from Source (for Development)
+```bash
+# Clone the repository
+git clone https://github.com/solenopsis/sf-precise-deploy.git
+cd sf-precise-deploy
+
+# Install dependencies
 npm install
 
-# Build the project (already done)
+# Build the project
 npm run build
 
 # Link plugin to SF CLI
